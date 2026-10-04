@@ -10,6 +10,51 @@ Research project testing the volatility-clustering stylized facts of
 *Quantitative Finance* 1(2), 223–236**, on modern public data. It then asks whether clustering
 differs across assets, frequencies, shocks and regimes, and whether it improves volatility forecasts.
 
+📄 **[Read the full research report →](report/report.md)**
+
+## Results at a glance
+
+| Question | Answer | Evidence |
+|---|---|---|
+| Is volatility clustered? | ✅ **Yes, universally** | i.i.d. null rejected for 14/14 assets (exact permutation test) and at every frequency from 5 min to 1 month |
+| Power-law decay, β ∈ [0.2, 0.4] (Cont)? | ⚠️ **Inconclusive** | 9/14 assets in range on lags 1–100, only 1/14 on lags 5–250; exponential fits better for 12/14 |
+| Taylor effect (\|r\| most predictable)? | ⚠️ Partly | Holds at lags 5–20 days, not at lag 1 |
+| Differs by asset class? | ⚠️ Weak | Equities > commodities > FX, but CIs overlap |
+| Depends on sampling frequency? | ✅ No, in calendar time | BTC ACFs from 5-min to daily collapse onto one curve |
+| Persistence after big shocks? | ✅ Front-loaded, asymmetric | Negative equity shocks ≈ 3× the vol impact of positive ones (p ≈ 0.0002) |
+| Does clustering improve forecasts? | ✅ **Yes** | Beats no-clustering baseline in 59/60 out-of-sample tests (2010–2025, QLIKE, Holm) |
+| Is it economically useful? | ✅ For risk, ❌ not for Sharpe | Vol-target tracking error 4.8 → 1.2 pp, drawdown −20% → −13%; no Sharpe gain after costs |
+
+### Volatility clustering: returns are uncorrelated, |returns| are not
+![ACF of returns vs absolute returns](results/figures/fig02_acf_spx.png)
+
+### Clustering exists at every sampling frequency
+![Frequency analysis](results/figures/fig07_frequency.png)
+
+### Is the slow decay "long memory"? The data can't tell it apart from GARCH plus level shifts
+![Non-stationarity check](results/figures/fig04_nonstationarity.png)
+
+### After large shocks: volatility jumps, then fades (faster than GARCH predicts); bad news matters more
+![Shock event study](results/figures/fig08_shocks.png)
+
+### Out-of-sample forecasting: every clustering model beats the no-clustering baseline
+![Forecasting results](results/figures/fig10_forecasting.png)
+
+<details>
+<summary><b>More figures</b> (returns, power-law fits, Taylor effect, cross-asset, regimes)</summary>
+
+![](results/figures/fig01_returns.png)
+![](results/figures/fig03_loglog.png)
+![](results/figures/fig05_taylor.png)
+![](results/figures/fig06_cross_asset.png)
+![](results/figures/fig09_regimes.png)
+
+</details>
+
+All tables (CSV + Markdown) are in [results/tables/](results/tables/).
+
+## Documents
+
 **Read in this order**
 1. [docs/01_paper_review.md](docs/01_paper_review.md): what the paper claims, and what can be reproduced
 2. [docs/02_research_design.md](docs/02_research_design.md): pre-registered hypotheses, tests, splits
