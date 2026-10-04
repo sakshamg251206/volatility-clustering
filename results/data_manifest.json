@@ -1,0 +1,138 @@
+{
+  "SPX.csv": {
+    "source": "yahoo:^GSPC",
+    "rows": 9067,
+    "first": "1990-01-02 00:00:00",
+    "last": "2025-12-31 00:00:00",
+    "sha256": "bd74596c8180acdca117d5108f2cee8845ab6d58751755df83ee32abd8d43367",
+    "downloaded_at": "2026-10-04T17:19:17+00:00"
+  },
+  "DAX.csv": {
+    "source": "yahoo:^GDAXI",
+    "rows": 9107,
+    "first": "1990-01-02 00:00:00",
+    "last": "2025-12-30 00:00:00",
+    "sha256": "9416436f86b94285abf9f1c0344b002bd54b1bc77755af378005d09fa21be3cf",
+    "downloaded_at": "2026-10-04T17:19:18+00:00"
+  },
+  "N225.csv": {
+    "source": "yahoo:^N225",
+    "rows": 8835,
+    "first": "1990-01-04 00:00:00",
+    "last": "2025-12-30 00:00:00",
+    "sha256": "505dbc1dc4fb92cac9e3e4cf7ed15f934ab60e3edcede0ee9aaa8e339df70353",
+    "downloaded_at": "2026-10-04T17:19:19+00:00"
+  },
+  "BMW.csv": {
+    "source": "yahoo:BMW.DE",
+    "rows": 7465,
+    "first": "1996-11-08 00:00:00",
+    "last": "2025-12-30 00:00:00",
+    "sha256": "40cd7772edd3473d0cc3adfcefb2662768640913e9fc01a331eda9d4b91d6452",
+    "downloaded_at": "2026-10-04T17:19:20+00:00"
+  },
+  "AAPL.csv": {
+    "source": "yahoo:AAPL",
+    "rows": 9067,
+    "first": "1990-01-02 00:00:00",
+    "last": "2025-12-31 00:00:00",
+    "sha256": "650e158fc5354979c241905111034cfaca67b0b8aabadb09eb7922ddf428d755",
+    "downloaded_at": "2026-10-04T17:19:20+00:00"
+  },
+  "JPM.csv": {
+    "source": "yahoo:JPM",
+    "rows": 9067,
+    "first": "1990-01-02 00:00:00",
+    "last": "2025-12-31 00:00:00",
+    "sha256": "dca3dcb9a1ba4cc1b561d6048ac8a899f38702b7924d71d615f7fe731d8c338d",
+    "downloaded_at": "2026-10-04T17:19:21+00:00"
+  },
+  "XOM.csv": {
+    "source": "yahoo:XOM",
+    "rows": 9067,
+    "first": "1990-01-02 00:00:00",
+    "last": "2025-12-31 00:00:00",
+    "sha256": "ef67f0800e8d0b40d432912b5ffcc1b986601f0e33cbc07f012bd57bc404d920",
+    "downloaded_at": "2026-10-04T17:19:22+00:00"
+  },
+  "USDJPY.csv": {
+    "source": "fred:DEXJPUS",
+    "rows": 9393,
+    "first": "1990-01-01 00:00:00",
+    "last": "2025-12-31 00:00:00",
+    "sha256": "5f3c76e83fcbb4aa9fe12505d027eca39f0aa597eebd06c9104dff2f8cd29418",
+    "downloaded_at": "2026-10-04T17:19:23+00:00"
+  },
+  "GBPUSD.csv": {
+    "source": "fred:DEXUSUK",
+    "rows": 9393,
+    "first": "1990-01-01 00:00:00",
+    "last": "2025-12-31 00:00:00",
+    "sha256": "44352d762312e30f38aee36771e8827633d81977a054ff376488713da532e00f",
+    "downloaded_at": "2026-10-04T17:19:24+00:00"
+  },
+  "EURUSD.csv": {
+    "source": "fred:DEXUSEU",
+    "rows": 7043,
+    "first": "1999-01-04 00:00:00",
+    "last": "2025-12-31 00:00:00",
+    "sha256": "982130fca2ba538ac35c8523cfb0801eb3af8d0e0b0e4ba06a68d442c7fdcb5f",
+    "downloaded_at": "2026-10-04T17:19:24+00:00"
+  },
+  "UST10.csv": {
+    "source": "fred:DGS10",
+    "rows": 9393,
+    "first": "1990-01-01 00:00:00",
+    "last": "2025-12-31 00:00:00",
+    "sha256": "ceb6b6d3e0be8c2a329e1968b9bade51a382de171c5716a5d26316fed9421394",
+    "downloaded_at": "2026-10-04T17:19:25+00:00"
+  },
+  "BRENT.csv": {
+    "source": "fred:DCOILBRENTEU",
+    "rows": 9393,
+    "first": "1990-01-01 00:00:00",
+    "last": "2025-12-31 00:00:00",
+    "sha256": "5433008732c72e4f6bbf3c14c24b93889ebfd4b629ec1e9ac9dfbfed6bff9927",
+    "downloaded_at": "2026-10-04T17:19:25+00:00"
+  },
+  "GOLD.csv": {
+    "source": "yahoo:GC=F",
+    "rows": 6359,
+    "first": "2000-08-30 00:00:00",
+    "last": "2025-12-31 00:00:00",
+    "sha256": "1861a0a9a86045b929424871dfd4de45af1a6b93610c564811b53cb67ec96e70",
+    "downloaded_at": "2026-10-04T17:19:26+00:00"
+  },
+  "BTC.csv": {
+    "source": "yahoo:BTC-USD",
+    "rows": 4124,
+    "first": "2014-09-17 00:00:00",
+    "last": "2025-12-31 00:00:00",
+    "sha256": "54efd8dc934c5013cd0017ff7e872b9adbf4635148fb56fbd639152eaeb4a20d",
+    "downloaded_at": "2026-10-04T17:19:27+00:00"
+  },
+  "BTCUSDT_5m.csv.gz": {
+    "source": "binance:BTCUSDT:5m",
+    "rows": 735602,
+    "first": "2019-01-01 00:00:00+00:00",
+    "last": "2025-12-31 23:55:00+00:00",
+    "sha256": "6801e1ebe558de9c9994e20c638014821837e4635ca854d65dab1dfaae576e07",
+    "downloaded_at": "2026-10-04T17:21:15+00:00"
+  },
+  "SPY_5m.csv": {
+    "source": "yahoo:SPY:5m:60d",
+    "rows": 4680,
+    "first": "2026-07-10 09:30:00-04:00",
+    "last": "2026-10-02 15:55:00-04:00",
+    "sha256": "50be5103d732ed2dfcbc58875b19e16a6700de57b1b86860b2c5288e01de0a3b",
+    "downloaded_at": "2026-10-04T17:21:15+00:00"
+  },
+  "SPY_60m.csv": {
+    "source": "yahoo:SPY:60m:730d",
+    "rows": 5072,
+    "first": "2023-11-03 09:30:00-04:00",
+    "last": "2026-10-02 15:30:00-04:00",
+    "sha256": "054872b6e810aa8849a36260fa4456b34d348c92b9fc719eb9b200bc1ca647f6",
+    "downloaded_at": "2026-10-04T17:21:16+00:00"
+  }
+}

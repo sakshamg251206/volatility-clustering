@@ -1,0 +1,18 @@
+                           n events  excess k=1  excess k=5  excess k=20  excess k=60  excess k=20 CI lo  excess k=20 CI hi  half-life (exp fit)  half-life CI lo  half-life CI hi
+sample                                                                                                                                                                            
+empirical, all                  384       0.754       0.414        0.221        0.195              0.127              0.329               35.810           25.411     5.173700e+01
+equities, negative              124       1.102       0.762        0.291        0.102              0.115              0.476               21.575           11.637     3.432200e+01
+equities, positive               68       0.348       0.028        0.044        0.045             -0.115              0.222              324.102           19.695     3.575181e+08
+GARCH-t simulated, all         7412       0.454       0.452        0.412        0.309              0.382              0.442              114.199           97.837     1.390120e+02
+empirical, Commodity             53       0.663       0.137        0.184        0.221             -0.091              0.553               37.872           15.246     8.920100e+01
+empirical, Crypto                33       1.214       0.816       -0.065        0.288             -0.287              0.193               60.962            3.624     1.831953e+08
+empirical, Equity index          71       0.947       0.740        0.310       -0.005              0.079              0.542               25.289           12.202     6.381200e+01
+empirical, FX                    87       0.467       0.288        0.307        0.409              0.110              0.539               48.900           24.279     1.614200e+02
+empirical, Rates                 19       0.700       0.173        0.610        0.122              0.063              1.251               79.577           27.347     3.620472e+07
+empirical, Single stock         121       0.768       0.363        0.142        0.133             -0.011              0.290               29.416           12.401     6.134800e+01
+empirical, threshold 3.0σ      1083       0.380       0.222        0.231        0.200              0.167              0.296               93.300           58.786     2.160320e+02
+empirical, threshold 5.0σ       147       0.997       0.381        0.217        0.111              0.052              0.384               30.004           17.589     5.221200e+01
+empirical, decluster 60d        343       0.782       0.432        0.233        0.209              0.128              0.347               36.964           26.096     5.313700e+01
+                    n neg  n pos  mean excess k=1..20, neg - pos   CI lo   CI hi  p (two-sided, bootstrap)
+equities (primary)    124     68                          0.3431  0.1953  0.5011                    0.0002
+all assets            234    150                          0.2019  0.0991  0.3104                    0.0004

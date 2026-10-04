@@ -1,0 +1,72 @@
+# Experiment configuration. Every number used by the analysis lives here.
+# Values were fixed in docs/02_research_design.md before any data was analysed.
+
+# Daily universe. source: yahoo | fred.  kind: price | yield (yield -> first differences)
+assets = [
+  { id = "SPX", name = "S&P 500", cls = "Equity index", source = "yahoo", ticker = "^GSPC", kind = "price" },
+  { id = "DAX", name = "DAX", cls = "Equity index", source = "yahoo", ticker = "^GDAXI", kind = "price" },
+  { id = "N225", name = "Nikkei 225", cls = "Equity index", source = "yahoo", ticker = "^N225", kind = "price" },
+  { id = "BMW", name = "BMW", cls = "Single stock", source = "yahoo", ticker = "BMW.DE", kind = "price" },
+  { id = "AAPL", name = "Apple", cls = "Single stock", source = "yahoo", ticker = "AAPL", kind = "price" },
+  { id = "JPM", name = "JPMorgan", cls = "Single stock", source = "yahoo", ticker = "JPM", kind = "price" },
+  { id = "XOM", name = "ExxonMobil", cls = "Single stock", source = "yahoo", ticker = "XOM", kind = "price" },
+  { id = "USDJPY", name = "USD/JPY", cls = "FX", source = "fred", ticker = "DEXJPUS", kind = "price" },
+  { id = "GBPUSD", name = "GBP/USD", cls = "FX", source = "fred", ticker = "DEXUSUK", kind = "price" },
+  { id = "EURUSD", name = "EUR/USD", cls = "FX", source = "fred", ticker = "DEXUSEU", kind = "price" },
+  { id = "UST10", name = "US 10Y yield", cls = "Rates", source = "fred", ticker = "DGS10", kind = "yield" },
+  { id = "BRENT", name = "Brent crude", cls = "Commodity", source = "fred", ticker = "DCOILBRENTEU", kind = "price" },
+  { id = "GOLD", name = "Gold futures", cls = "Commodity", source = "yahoo", ticker = "GC=F", kind = "price" },
+  { id = "BTC", name = "Bitcoin", cls = "Crypto", source = "yahoo", ticker = "BTC-USD", kind = "price" },
+]
+
+[study]
+seed = 20011               # master RNG seed (permutations, bootstraps, simulations)
+start = "1990-01-01"
+end = "2025-12-31"         # inclusive; complete calendar years
+
+
+[intraday]
+binance_symbol = "BTCUSDT"
+binance_interval = "5m"
+binance_start = "2019-01"   # first month (inclusive)
+binance_end = "2025-12"     # last month (inclusive)
+yahoo_ticker = "SPY"        # short rolling-window equity cross-check
+frequencies_min = [5, 15, 30, 60, 240, 1440]
+
+[clustering]
+max_lag = 250
+s_lags = 20                 # S20 = sum of ACF lags 1..20
+n_perm = 2000
+n_boot = 1000
+boot_block = 250           # mean block length (days). Pre-registered 50; changed after block-sensitivity check (see report, Deviations)
+alphas = [0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 2.0, 2.5, 3.0]
+taylor_lags = [1, 5, 20]
+powerlaw_lags = [1, 100]
+powerlaw_lags_robust = [5, 250]
+subsample_years = 5
+trailing_vol_window = 252
+garch_sim_paths = 200
+fwer = 0.05
+
+[shocks]
+threshold = 4.0
+thresholds_robust = [3.0, 5.0]
+ewma_lambda = 0.94
+decluster = 20
+decluster_robust = 60
+horizon = 60
+
+[forecast]
+oos_start = "2010-01-01"
+btc_oos_start = "2022-01-01"
+refit = "MS"                # month start; robustness: "YS"
+ewma_lambda = 0.94
+har_lags = [1, 5, 22]
+dm_hac_lags = 5
+assets = ["SPX", "DAX", "N225", "USDJPY", "EURUSD", "UST10", "BRENT", "GOLD", "AAPL", "JPM", "XOM", "BMW", "GBPUSD", "BTC"]
+
+[voltarget]
+asset = "SPX"
+target_vol = 0.10           # annualised
+max_leverage = 2.0
+cost_bp = [2, 10]
