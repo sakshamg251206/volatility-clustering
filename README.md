@@ -3,7 +3,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23143124.svg)](https://doi.org/10.5281/zenodo.23143124)
 
 *Cite as:* Garg, S. (2026). *Volatility Clustering Revisited: A Reproduction and Extension of Cont (2001)*
-Zenodo. https://doi.org/10.5281/zenodo.23143124
+. Zenodo. https://doi.org/10.5281/zenodo.23143124
 
 Research project testing the volatility-clustering stylized facts of
 **Cont, R. (2001), "Empirical properties of asset returns: stylized facts and statistical issues",
